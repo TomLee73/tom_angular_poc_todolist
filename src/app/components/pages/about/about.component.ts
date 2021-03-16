@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { WelcomeDataService } from 'src/app/service/data/welcome-data.service';
 
 @Component({
   selector: 'app-about',
@@ -7,13 +9,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AboutComponent implements OnInit {
 
-  constructor() { }
+  constructor(  
+    private route:ActivatedRoute,
+    private service:WelcomeDataService) {
+  
+   }
 
   ngOnInit() {
   }
 
   getWelcomeMessage() {
-    console.log("This is a new message: Hello World")
+    this.service.executeHelloWorldBeanService();
+    //console.log("get welcome message");
   }
 
 }
