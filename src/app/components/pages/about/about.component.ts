@@ -13,7 +13,7 @@ export class AboutComponent implements OnInit {
   }
 
   getWelcomeMessage() {
-    console.log("get  welcome message")
+    console.log("This is a new message: Hello World")
   }
 
 }
